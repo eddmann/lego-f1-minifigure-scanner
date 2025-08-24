@@ -1,14 +1,24 @@
 # Lego F1 Minifigure Scanner
 
+<p align="center">
+  <img src="public/logo.png" alt="App logo" width="200" height="200" />
+  <br/>
+</p>
+
 > Disclaimer: This project is part of my exploration using AI tools (e.g., Cursor and Claude Code) within my development workflow. The code is largely AI‑generated. Use caution if you intend to reuse patterns or logic here.
 
 ## Background
 
-Sunday morning hack: my nephews are collecting the Lego F1 minifigures and only have a few left to complete the set. At £3.50 per blind box, duplicates get expensive. I noticed the boxes have unique Data Matrix codes, and this Reddit thread catalogs them:
+Sunday morning hack: my nephews are collecting the Lego F1 minifigures and only have a few left to complete the set. At £3.50 per blind box, duplicates get expensive. I noticed the boxes have unique Data Matrix codes, and [this](https://www.reddit.com/r/lego/comments/1kbntn8/full_list_of_lego_71049_f1_collectibles_blind_box/) Reddit thread catalogs them.
 
-`https://www.reddit.com/r/lego/comments/1kbntn8/full_list_of_lego_71049_f1_collectibles_blind_box/`
+So I built a quick 45‑minute web app using Cursor (GPT‑5 model) to scan the code and identify the minifigure/car inside.
 
-So I built a quick 1‑hour web app using Cursor to scan the code and identify the minifigure/car inside.
+## Preview
+
+<div align="center">
+  <img src="README/scanner.png" alt="Scanner screen" width="45%" />
+  <img src="README/result.png" alt="Result screen" width="45%" />
+</div>
 
 ## Features
 
@@ -46,3 +56,4 @@ So I built a quick 1‑hour web app using Cursor to scan the code and identify t
 
 - This app uses the first numeric token from the scanned string for matching (e.g., "6538305 107S5 ..." → "6538305").
 - Public assets are served using `import.meta.env.BASE_URL` to work under Pages.
+- React 18 is required for `@yudiel/react-qr-scanner` compatibility.

@@ -14,16 +14,14 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: [
-        'vite.svg',
+        'logo.png',
         'lego.png',
         'its-lights-out-and-away-we-go.mp3',
-        'images/placeholder.svg',
       ],
       manifest: {
         name: 'Lego F1 Minifigure Scanner',
         short_name: 'F1 Scanner',
-        description:
-          'Scan Lego F1 Data Matrix codes to identify minifigures and cars.',
+        description: 'Scan LEGO F1 blind‑box codes to identify minifigures.',
         theme_color: '#161616',
         background_color: '#161616',
         display: 'standalone',
@@ -31,9 +29,9 @@ export default defineConfig({
         start_url: '.',
         icons: [
           {
-            src: '/vite.svg',
+            src: `${base}logo.png`,
             sizes: '192x192',
-            type: 'image/svg+xml',
+            type: 'image/png',
             purpose: 'any maskable',
           },
         ],
