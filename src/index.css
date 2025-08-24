@@ -1,0 +1,39 @@
+@import 'tailwindcss';
+
+/* Base page styles aligned to F1 dark theme */
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-color: #161616;
+  color: #ffffff;
+}
+
+/* Optional helper for glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+/* Lego-inspired heading weight */
+.lego-heading {
+  font-family: 'Bebas Neue', system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.racing-text {
+  font-family: Rajdhani, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.title-outline {
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
